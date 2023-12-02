@@ -6,12 +6,17 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { fetchContacts } from 'redux/reducers/contacts/operations';
-import { selectContactsError, selectContactsIsLoading } from 'redux/selectors';
+import {
+  selectContactsError,
+  selectContactsIsLoading,
+} from 'redux/reducers/contacts/selectors';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './Layout/layout';
-import Login from './Login/login';
-import Register from './Login/register';
+import Layout from './Layout/Layout';
+import Login from './Login/Login';
+import Register from './Login/Register';
 import Home from './Home/Home';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
 export const App = () => {
   const isLoading = useSelector(selectContactsIsLoading);
@@ -28,9 +33,19 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="contacts" element={<ContactList />} />
+          <Route path="login" element={<Login />} redirect="/contactlist" />
+          <Route
+            path="register"
+            element={
+              <ProtectedRoute element={<Register />} redirect="/contactlist" />
+            }
+          />
+          <Route
+            path="ContactList"
+            element={
+              <PrivateRoute element={<ContactList />} redirect="/login" />
+            }
+          />
         </Route>
       </Routes>
 

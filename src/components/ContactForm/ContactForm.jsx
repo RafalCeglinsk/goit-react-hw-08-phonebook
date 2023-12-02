@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 import { addContact } from 'redux/reducers/contacts/operations';
-import { selectGetContacts } from 'redux/selectors';
+import { selectGetContacts } from 'redux/reducers/contacts/selectors';
 
 import css from './ContactForm.module.css';
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { setFilter } from 'redux/reducers/contacts/filterSlice';
 
 import css from './Filter.module.css';
-import { selectGetFilter } from 'redux/selectors';
+import { selectGetFilter } from 'redux/reducers/contacts/selectors';
 
 export const Filter = () => {
   const filter = useSelector(selectGetFilter);
