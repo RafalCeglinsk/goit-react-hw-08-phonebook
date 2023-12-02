@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/reducers/contacts/operations';
 import { selectContactsError, selectContactsIsLoading } from 'redux/selectors';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout/layout';

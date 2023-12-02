@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/reducers/contacts/operations';
 import { selectGetContacts } from 'redux/selectors';
 
 import css from './ContactForm.module.css';
