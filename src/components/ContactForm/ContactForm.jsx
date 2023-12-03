@@ -58,7 +58,3 @@ export const ContactForm = () => {
     </form>
   );
 };
-
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};

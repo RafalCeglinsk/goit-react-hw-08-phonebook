@@ -26,7 +26,3 @@ export const Filter = () => {
     </label>
   );
 };
-
-Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
-};
