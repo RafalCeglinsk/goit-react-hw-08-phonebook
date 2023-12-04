@@ -3,14 +3,23 @@ import PropTypes from 'prop-types';
 import { ContactList } from './ContactList/ContactList';
 
 import { Routes, Route } from 'react-router-dom';
-import Layout from './Layout/Layout';
-import Login from './Login/Login';
-import Register from './Login/Register';
+import Layout from './Layout/layout';
+import Login from './Login/login';
+import Register from './Login/register';
 import Home from './Home/Home';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
+import { useDispatch } from 'react-redux';
+import { currentUser } from 'redux/reducers/auth/operations';
+import { useEffect } from 'react';
 
 export const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(currentUser());
+  }, [dispatch]);
+
   return (
     <div>
       <Routes>
