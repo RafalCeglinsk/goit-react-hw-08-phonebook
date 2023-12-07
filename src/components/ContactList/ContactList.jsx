@@ -31,12 +31,14 @@ export const ContactList = () => {
   return (
     <div>
       {isLoading && !error && <p>Loading...</p>}
-      <h1>Phonebook</h1>
       <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ul>
+      <h2 className="contactsHeader">Contacts</h2>
+      <div className="ContactsContainer">
+        <Filter />
+      </div>
+      <ul className="contactsList">
         {isLoading && !error && <p>Loading...</p>}
+
         {filteredContacts.map(contact => (
           <Contacts key={contact.id} contact={contact} />
         ))}

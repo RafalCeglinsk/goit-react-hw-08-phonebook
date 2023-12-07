@@ -1,21 +1,31 @@
-.input {
-  display: flex;
-  padding: 3px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  margin-left: 10px;
-  border: 1px solid black;
-}
-.addContact {
-  border: 1px solid grey;
-  padding: 10px 20px;
-  margin-left: 10px;
+.AddForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
   border-radius: 5px;
-  cursor: pointer;
+  background-color: #f9f9f9;
 }
-.title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+
+.AddLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.AddHeader {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.AddInput {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #5a5757;
+  border-radius: 4px;
   margin-bottom: 10px;
-  font-weight: lighter;
-  margin-left: 10px;
+}
+.AddContactBtn {
+  display: flex;
+  justify-content: center;
 }

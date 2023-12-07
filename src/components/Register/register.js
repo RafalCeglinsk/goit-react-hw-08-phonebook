@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
+import { Button } from '@mui/material';
+
 import { register } from 'redux/reducers/auth/operations';
 
 export default function Register() {
@@ -20,7 +23,7 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="RegisterContainer">
       <form onSubmit={handleSubmit}>
         <label>
           <div>
@@ -30,6 +33,7 @@ export default function Register() {
               type="text"
               name="username"
               value={username}
+              placeholder="Set your name"
               onChange={e => setUserName(e.target.value)}
               required
             />{' '}
@@ -41,6 +45,7 @@ export default function Register() {
               type="password"
               name="password"
               value={password}
+              placeholder="Set your password"
               onChange={e => setPassword(e.target.value)}
               required
             />{' '}
@@ -51,13 +56,16 @@ export default function Register() {
               type="text"
               name="email"
               value={email}
+              placeholder="Enter your E-mail"
               onChange={e => setEmail(e.target.value)}
               required
             />{' '}
           </div>
         </label>
         <div>
-          <button type="submit">Register</button>
+          <Button type="submit" variant="contained">
+            Register
+          </Button>
         </div>
       </form>
     </div>

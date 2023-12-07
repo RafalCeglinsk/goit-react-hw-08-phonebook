@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/reducers/contacts/operations';
 
-import css from './Contacts-module.css';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { Button } from '@mui/material';
+
+import { deleteContact } from 'redux/reducers/contacts/operations';
 
 export const Contacts = ({ contact }) => {
   const dispatch = useDispatch();
@@ -14,15 +15,22 @@ export const Contacts = ({ contact }) => {
   };
 
   return (
-    <li>
-      {contact.name}: {contact.number}
-      <button
-        onClick={() => handleDeleteContact(contact.id)}
-        className={css.deleteContact}
-      >
-        Delete
-      </button>
-    </li>
+    <div className="contactContainer">
+      <li className="contactItem">
+        <div className="contactInfo">
+          <div className="name">{contact.name}:</div>
+          <div className="number">{contact.number}</div>
+        </div>
+        <Button
+          variant="contained"
+          className="deleteBtn"
+          startIcon={<DeleteIcon />}
+          onClick={() => handleDeleteContact(contact.id)}
+        >
+          Delete
+        </Button>
+      </li>
+    </div>
   );
 };
 
@@ -30,7 +38,6 @@ Contacts.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
   }).isRequired,
 };

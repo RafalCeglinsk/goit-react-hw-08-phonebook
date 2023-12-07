@@ -1,0 +1,33 @@
+.HomeContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+li {
+  margin-bottom: 15px;
+  flex: 1;
+  max-width: 400px;
+}
+h1 {
+  color: #007acc;
+  margin-bottom: 30px;
+}
+.ListContainer {
+  display: flex;
+}

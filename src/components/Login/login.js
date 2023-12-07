@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
+import { Button } from '@mui/material';
+import LoginIcon from '@mui/icons-material/Login';
+
 import { login } from 'redux/reducers/auth/operations';
 
 export default function Login() {
@@ -17,14 +21,15 @@ export default function Login() {
     );
   };
   return (
-    <div>
+    <div className="LoginContainer">
       <form onSubmit={handleSubmit}>
         <div>
-          <h2>Email:</h2>
+          <h2>E-mail: </h2>
           <input
             type="text"
             name="email"
             value={email}
+            placeholder="Enter your E-mail"
             onChange={e => setEmail(e.target.value)}
             required
           />{' '}
@@ -36,11 +41,14 @@ export default function Login() {
             type="password"
             name="password"
             value={password}
+            placeholder="Enter your password"
             onChange={e => setPassword(e.target.value)}
             required
           />{' '}
         </div>
-        <button type="submit">Login</button>
+        <Button type="submit" variant="contained" startIcon={<LoginIcon />}>
+          Login
+        </Button>
         <div></div>
       </form>
     </div>

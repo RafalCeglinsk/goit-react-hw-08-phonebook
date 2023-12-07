@@ -1,0 +1,28 @@
+.RegisterContainer {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.RegisterContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.RegisterContainer div {
+  margin-bottom: 15px;
+}
+
+.RegisterContainer h2 {
+  color: #333;
+}
+
+.RegisterContainer input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #5a5757;
+  border-radius: 4px;
+}

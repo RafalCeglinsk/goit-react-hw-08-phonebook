@@ -1,11 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 
-import { addContact } from 'redux/reducers/contacts/operations';
-import { selectGetContacts } from 'redux/reducers/contacts/selectors';
+import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
+import { Button } from '@mui/material';
 
-import css from './ContactForm.module.css';
+import { selectGetContacts } from 'redux/reducers/contacts/selectors';
+import { addContact } from 'redux/reducers/contacts/operations';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectGetContacts);
@@ -29,32 +30,40 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
-      <label className={css.label}>
-        <h2 className={css.title}>Name:</h2>
+    <form onSubmit={handleSubmit} className="AddForm">
+      <label className="AddLabel">
+        <h2 className="AddHeader">Name:</h2>
         <input
           type="text"
           name="name"
-          className={css.input}
           value={contacts.name}
+          className="AddInput"
+          placeholder="Enter contacts name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-        <h2 className={css.title}>Number:</h2>
+        <h2 className="AddHeader">Number:</h2>
         <input
           type="tel"
           name="number"
-          className={css.input}
           value={contacts.number}
+          className="AddInput"
+          placeholder="Enter contacts number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </label>
-      <button type="submit" className={css.addContact}>
-        Add Contact
-      </button>
+      <div className="AddContactBtn">
+        <Button
+          type="submit"
+          variant="contained"
+          startIcon={<AddToHomeScreenIcon />}
+        >
+          Add Contact
+        </Button>
+      </div>
     </form>
   );
 };

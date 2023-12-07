@@ -1,14 +1,16 @@
-.title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-bottom: 10px;
-  font-weight: lighter;
-  margin-left: 10px;
+.filterContainer {
+  margin-bottom: 20px;
 }
-.input {
-  display: flex;
-  padding: 3px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  margin-left: 10px;
-  border: 1px solid black;
+
+.filterTitle {
+  font-size: 24ox;
+  margin-bottom: 5px;
+}
+
+.filterInput {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #5a5757;
+  border-radius: 5px;
 }
