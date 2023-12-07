@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from '../Layout/layout';
-import Login from '../Login/login';
-import Register from '../Register/register';
+import Layout from '../Layout/Layout';
+import Login from '../Login/Login';
+import Register from '../Register/Register';
 import Home from '../Home/Home';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';

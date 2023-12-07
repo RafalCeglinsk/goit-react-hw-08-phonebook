@@ -1,12 +1,12 @@
 @import-normalize; /* bring in normalize.css styles */
 
-@import './components/Layout/layout-module.css';
-@import './components/Home/Home-module.css';
-@import './components/Login/Login-module.css';
-@import './components/Register/Register-module.css';
+@import './components/Layout/Layout.module.css';
+@import './components/Home/Home.module.css';
+@import './components/Login/Login.module.css';
+@import './components/Register/Register.module.css';
 @import './components/ContactForm/ContactForm.module.css';
-@import './components/ContactList/ContactList-module.css';
-@import './components/Contacts/Contacts-module.css';
+@import './components/ContactList/ContactList.module.css';
+@import './components/Contacts/Contacts.module.css';
 @import './components/Filter/Filter.module.css';
 body {
   margin: 0 auto;
