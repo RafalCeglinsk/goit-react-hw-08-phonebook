@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
@@ -49,4 +50,8 @@ export const UserModal = ({ isOpen }) => {
         portalRoot
       )
     : null;
+};
+
+UserModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
 };
