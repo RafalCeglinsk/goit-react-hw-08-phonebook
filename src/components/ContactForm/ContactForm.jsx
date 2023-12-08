@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-
 import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
 import { Button } from '@mui/material';
 
