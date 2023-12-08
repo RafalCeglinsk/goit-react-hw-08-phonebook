@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from '../Layout/Layout';
-import Login from '../Login/Login';
-import Register from '../Register/Register';
-import Home from '../Home/Home';
-import PrivateRoute from '../PrivateRoute/PrivateRoute';
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import Layout from './Layout/Layout';
+import Login from './Login/Login';
+import Register from './Register/Register';
+import Home from './Home/Home';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
-import { ContactList } from '../ContactList/ContactList';
+import { ContactList } from './ContactList/ContactList';
 import { currentUser } from 'redux/reducers/auth/operations';
 import { useEffect } from 'react';
 
