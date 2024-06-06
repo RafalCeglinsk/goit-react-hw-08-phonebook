@@ -10,11 +10,13 @@ import { App } from 'components/App';
 import './index.css';
 import { PersistGate } from 'redux-persist/integration/react';
 
+const basename = '/goit-react-hw-08-phonebook';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <App />
         </BrowserRouter>
       </PersistGate>
